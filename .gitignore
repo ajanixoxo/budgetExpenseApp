@@ -1,0 +1,17 @@
+# Ignore virtual environments
+firstDjango/
+env/
+venv/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore environment variables
+.env
+
+# Ignore OS-specific files
+*.DS_Store
+
+# Ignore SQLite DB (if you're using one)
+db.sqlite3
