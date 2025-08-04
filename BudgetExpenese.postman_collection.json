@@ -1,0 +1,315 @@
+{
+	"info": {
+		"_postman_id": "b560357b-a44f-4e8e-8cb3-fce3a01153ae",
+		"name": "BudgetExpenese",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27306104"
+	},
+	"item": [
+		{
+			"name": "Auth Routes",
+			"item": [
+				{
+					"name": "Token Refresh",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1NDQwODgyNiwiaWF0IjoxNzU0MzIyNDI2LCJqdGkiOiIwMDVmMGQ2YzkyYmY0ZWJiOTM0OGFkYzk5N2Y1YjFmNCIsInVzZXJfaWQiOiIzIn0.Rrok7RAvvfMW0cgtiwH2O6t-Iarjds2OxCBSgBziC5Q\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/token/refresh/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"token",
+								"refresh",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1NDQwODkyMywiaWF0IjoxNzU0MzIyNTIzLCJqdGkiOiJlNjFmZjhiYWE4MjI0NTEwYTAxYTllM2U1YzgzNzNiYiIsInVzZXJfaWQiOiIzIn0.MvC4I962EkKuDNE8BpaX8Tflz5y_2PbCWW4oedJosRo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/profile/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1NDQwODkyMywiaWF0IjoxNzU0MzIyNTIzLCJqdGkiOiJlNjFmZjhiYWE4MjI0NTEwYTAxYTllM2U1YzgzNzNiYiIsInVzZXJfaWQiOiIzIn0.MvC4I962EkKuDNE8BpaX8Tflz5y_2PbCWW4oedJosRo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"first_name\": \"Ade.dev\",\r\n  \"last_name\": \"Dexcoded\",\r\n  \"phone_number\":\"09130300630\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/profile/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invite Members",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU0MzIzMjExLCJpYXQiOjE3NTQzMjI5MTIsImp0aSI6IjQ3NDk0MGNkZGYwNTQ5Yzk4Yjg0NjYyNmFlYTQ4MGQ5IiwidXNlcl9pZCI6IjMifQ.Rok5aWMu99NGRYNmzesQDRsHUwTv28ap0JfQPI8uklU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"first_name\": \"Emma\",\r\n  \"last_name\": \"Blake\",\r\n  \"email\": \"emmablake768@gmail.com\",\r\n  \"phone_number\": \"09012345678\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/invite/",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"invite",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "API's that needs you to be authenticated  \nDont forget to add the access token to the headerssss!!!!!"
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzU0MzIwNzQ1LCJpYXQiOjE3NTQzMjA0NDYsImp0aSI6ImVmODBiMTFlNjk4YjQ1ZTJhZDYwYmY5NjU4ODQ5MjYwIiwidXNlcl9pZCI6IjMifQ.6tz2ZlKBoio9_MutxrqoKHB7dzl6JZ23rD-j6imrLaY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1NDQwNjc1MSwiaWF0IjoxNzU0MzIwMzUxLCJqdGkiOiI5OTUxY2JhNzQ3NDE0ZTZhOGZlNjVjZjAxMjU0NjE2ZCIsInVzZXJfaWQiOiIzIn0.9VDYvFMFBWBhaGhRPtnYebQ4PPmXT3ylvvn29Do2lPY\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/auth/logout/",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"logout",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"joelayomide35@gmail.com\",\r\n  \"password\": \"SecurePass123!\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/auth/login/",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"org_name\": \"Tech Bridge Inc\",\r\n  \"org_email\": \"org@techbridge.com\",\r\n  \"user_email\": \"joelayomide35@gmail.com\",\r\n  \"username\": \"admintech\",\r\n  \"password\": \"SecurePass123!\",\r\n  \"first_name\": \"Adeolu\",\r\n  \"last_name\": \"Joel\",\r\n  \"phone_number\": \"+2347025205194\",\r\n  \"profile_image\": \"profile123.png\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/auth/register/",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/test-email/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"test-email",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify Email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/auth/verify-email/?uid=3&token=ctyx3w-627a2ccf2c1de5efa6bca19384e274c1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"verify-email",
+						""
+					],
+					"query": [
+						{
+							"key": "uid",
+							"value": "3"
+						},
+						{
+							"key": "token",
+							"value": "ctyx3w-627a2ccf2c1de5efa6bca19384e274c1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://127.0.0.1:8000",
+			"type": "default"
+		}
+	]
+}
