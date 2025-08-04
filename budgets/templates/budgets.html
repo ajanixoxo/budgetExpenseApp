@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>All Budgets </h1>
+{% for budget in budgets %}
+<div>
+    <h1>{{ budget.title}}</h1>
+    <h4>{{budget.budgetamount}}</h4>
+    <a>View budget expense</a>
+
+    </div>
+    {% endfor %}
+</body>
+</html>
